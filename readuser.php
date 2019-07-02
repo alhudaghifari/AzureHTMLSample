@@ -2,8 +2,12 @@
 
 include("connect.php");
 
+echo "cek satu";
 $sql = "SELECT * FROM User";
 $result = $conn->query($sql);
+
+
+echo "cek dua";
 
 if ($result->num_rows > 0) {
     // output data of each row
@@ -13,6 +17,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+echo "hasilnya mana bos";
 $conn->close();
 mysqli_close($conn);
 
