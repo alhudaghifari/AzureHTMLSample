@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>Input Pekerjaan!</title>
   </head>
   <body>
     <div class="container">

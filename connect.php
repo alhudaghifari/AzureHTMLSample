@@ -36,6 +36,7 @@
     // $serverName = "tcp:latiandicoding.database.windows.net,1433";
     // $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+    echo "nyobain dulu";
     try  
     {  
         $serverName = "tcp:latiandicoding.database.windows.net,1433";  
