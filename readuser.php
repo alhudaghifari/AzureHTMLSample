@@ -2,11 +2,15 @@
 
 include("connect.php");
 
+echo "tes </br>";
  //Establishes the connection
  $tsql= "SELECT * FROM [dbo].[user]";
  $getResults= sqlsrv_query($conn, $tsql);
- if ($getResults == FALSE)
+ echo "tes2 </br>";
+ if ($getResults == FALSE) {
      echo (sqlsrv_errors());
+     die(FormatErrors(sqlsrv_errors()));  
+ }
 
      echo "
         <div class=\"container\">
