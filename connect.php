@@ -10,7 +10,7 @@
     $conn = sqlsrv_connect($serverName, $connectionOptions);  
     if($conn == false)  {
         echo "Error bos!";  
-	    die("Connection failed: " . $conn->connect_error);
+	    die("Connection failed: " . $conn->connect_error . " </br>" . FormatErrors(sqlsrv_errors()));
         die(FormatErrors(sqlsrv_errors()));  
     }
 ?>
