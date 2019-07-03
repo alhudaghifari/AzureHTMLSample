@@ -9,7 +9,6 @@ include("connect.php");
      echo (sqlsrv_errors());
 
      echo "
-     
         <div class=\"container\">
      <table class=\"table\">
      <thead>
@@ -34,11 +33,6 @@ include("connect.php");
       <td>" . $row["Job"] . "</td>
       <td>" . $stringdatetime . "</td>
     </tr>";
-    
-//   echo "id: " . $row["id"]. " - Name: " . $row["Name"] . 
-//         " - Email : " . $row["Email"] . " - Job : " . $row["Job"] . 
-//         " - Date : " . $stringdatetime . "<br>";  
-
  }
 echo "</tbody
 </table>
