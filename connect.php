@@ -4,7 +4,7 @@
     $password = "KambingJantan123";
     $db_name = "dicodingdb";
 
-    $serverName = "tcp:latiandicoding.database.windows.net,1433";  
+    $serverName = "latiandicoding.database.windows.net";  
     $connectionOptions = array("Database"=>$db_name,  
         "Uid"=>$username, "PWD"=>$password);  
     $conn = sqlsrv_connect($serverName, $connectionOptions);  
