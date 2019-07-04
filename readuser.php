@@ -2,22 +2,18 @@
 
 include("connect.php");
 
-echo "tes </br>";
- //Establishes the connection
- $tsql= "SELECT * FROM [dbo].[user]";
- $getResults= sqlsrv_query($conn, $tsql);
- echo "tes2 </br>";
- if ($getResults == FALSE) {
-     echo (sqlsrv_errors());
-     die(FormatErrors(sqlsrv_errors()));  
- }
+//Establishes the connection
+$tsql = "SELECT Name, Email, Job, Date FROM [dbo].[user]";
+$getResults = sqlsrv_query($conn, $tsql);
+if ($getResults == FALSE) {
+  echo ("Mohon reload page ulang :)");
+  die(FormatErrors(sqlsrv_errors()));
+}
 
-     echo "
-        <div class=\"container\">
+echo "<div class=\"container\">
      <table class=\"table\">
      <thead>
          <tr>
-           <th>id</th>
            <th>Name</th>
            <th>Email</th>
            <th>Job</th>
@@ -26,22 +22,18 @@ echo "tes </br>";
        </thead>
        <tbody>";
 
- while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-    $stringdatetime=$row["Date"]->format('Y-m-d H:i:s');
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+  $stringdatetime = $row["Date"]->format('Y-m-d H:i:s');
 
-    echo "
-    <tr>
-      <td>" . $row["id"] . "</td>
+  echo "<tr>
       <td>" . $row["Name"] . "</td>
       <td>" . $row["Email"] . "</td>
       <td>" . $row["Job"] . "</td>
       <td>" . $stringdatetime . "</td>
     </tr>";
- }
+}
 echo "</tbody
 </table>
 </div>";
 
- sqlsrv_free_stmt($getResults);
-
-?>
+sqlsrv_free_stmt($getResults);
