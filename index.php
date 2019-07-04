@@ -45,8 +45,10 @@
   </div>
 
   <script src="js/jquery.min.js"></script>
+
   <script>
     function btnReload() {
+      console.log("reload");
       location.reload();
     }
 
@@ -64,9 +66,11 @@
           $('.message_box').html(
             '<img src="Loader.gif" width="25" height="25"/>'
           );
+          console.log("sebelum kirim");
         },
         success: function(data) {
           setTimeout(function() {
+            console.log("sukses bro");
             $('.message_box').html(data);
           }, delay);
         }
