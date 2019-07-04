@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <br /><br />
   <div class="container">
     <h1>Form Daftar Pekerjaan</h1>
 
@@ -19,7 +20,6 @@
     $date = new DateTime("now", new DateTimeZone('Asia/Jakarta'));
     echo "time opened (Asia/Jakarta) : " . $date->format('Y-m-d H:i:s');
     ?>
-
     <form id="myForm" method="post">
       <div class="form-group">
         <label for="inputNama">Nama Lengkap</label>
@@ -41,11 +41,8 @@
     </form>
   </div>
 
-  </br>
-
   <div class="message_box" style="margin:10px 0px;">
   </div>
-  </br>
 
   <script src="js/jquery.min.js"></script>
   <script>
