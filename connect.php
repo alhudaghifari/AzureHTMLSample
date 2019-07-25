@@ -5,7 +5,8 @@ $password = "KambingJantan123";
 $db_name = "dicodingdb";
 
 $serverName = "latiandicoding.database.windows.net";
-$serverName2 = "latiandicodingwndws.database.windows.net";
+$serverName1 = "latiandicodingwndws.database.windows.net";
+$serverName2 = "latiandicodingwndws2.database.windows.net";
 $connectionOptions = array(
     "Database" => $db_name,
     "Uid" => $username, "PWD" => $password
