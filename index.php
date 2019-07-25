@@ -14,6 +14,13 @@
 <body>
   <br /><br />
   <div class="container">
+
+    <h1>Ingin mendeteksi gambar anda sedang melakukan apa?</h1>
+
+    <button id="btnToDetectImage" class="btn btn-primary">Deteksi Gambar</button>
+
+    <br /><br />
+
     <h1>Form Daftar Pekerjaan</h1>
 
     <?php
@@ -45,6 +52,7 @@
   </div>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/logic.js"></script>
 
   <script>
     function btnReload() {
