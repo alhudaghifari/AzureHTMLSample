@@ -2,7 +2,8 @@
 
 $username = "dicoding";
 $password = "KambingJantan123";
-$db_name = "dicodingdb";
+$db_name = "latiandicodingwndws";
+$db_nameOld = "dicodingdb";
 
 $serverName = "latiandicoding.database.windows.net";
 $serverName1 = "latiandicodingwndws.database.windows.net";
