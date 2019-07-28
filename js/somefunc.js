@@ -1,19 +1,5 @@
 function processImage() {
-  // **********************************************
-  // *** Update or verify the following values. ***
-  // **********************************************
-
-  // Replace <Subscription Key> with your valid subscription key.
   var subscriptionKey = "b20b69118a964f51b7c44a166bb4dd76";
-
-  // You must use the same Azure region in your REST API method as you used to
-  // get your subscription keys. For example, if you got your subscription keys
-  // from the West US region, replace "westcentralus" in the URL
-  // below with "westus".
-  //
-  // Free trial subscription keys are generated in the "westus" region.
-  // If you use a free trial subscription key, you shouldn't need to change
-  // this region.
   var endPoint = "https://dicodingghifarivision.cognitiveservices.azure.com";
   var uriBase = endPoint + "/vision/v2.0/analyze";
 
@@ -26,6 +12,7 @@ function processImage() {
 
   // Display the image.
   var sourceImageUrl = document.getElementById("inputImage").value;
+
   document.querySelector("#sourceImage").src = sourceImageUrl;
 
   // Make the REST API call.
@@ -45,8 +32,9 @@ function processImage() {
   })
 
     .done(function(data) {
-      // Show formatted JSON on webpage.
-      $("#responseTextArea").val(JSON.stringify(data, null, 2));
+      $(".captions_text").html(
+        "<p> Keterangan : " + data.description.captions[0].text + "</p>"
+      );
     })
 
     .fail(function(jqXHR, textStatus, errorThrown) {

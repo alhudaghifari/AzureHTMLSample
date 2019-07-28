@@ -46,7 +46,8 @@ if ($uploadOk == 0) {
         $content = fopen($fileToUpload, "r");
         //Mengunggah blob
         $blobClient->createBlockBlob($containerName, $target_file, $content);
-        header("Location: https://dicodingghifari2.azurewebsites.net/imagepage.php");
+        // header("Location: https://dicodingghifari2.azurewebsites.net/imagepage.php");
+        header("Location: http://localhost/AzureHTMLSample/imagepage.php");
         die();
     } catch (ServiceException $e) {
         // Handle exception based on error codes and messages.
