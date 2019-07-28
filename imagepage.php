@@ -37,7 +37,8 @@
         ?>
 
         <h3>Analisis Gambar:</h3>
-        Enter the URL to an image, then click the <strong>Analyze image</strong> button.
+        Enter the URL to an image, then click the <strong>Analyze image</strong> button. <br>
+        You can also copy and paste from the link of image in azure blob storage list that showed above.
         <br><br>
         Image to analyze:
         <input type="text" name="inputImage" id="inputImage" value="http://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
