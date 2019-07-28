@@ -15,7 +15,7 @@
   <br /><br />
   <div class="container">
 
-    <h1>Ingin mendeteksi gambar anda sedang melakukan apa?</h1>
+    <h1>Ingin menyimpan dan mendeteksi gambar anda sedang melakukan apa?</h1>
 
     <button id="btnToDetectImage" class="btn btn-primary">Deteksi Gambar</button>
 
